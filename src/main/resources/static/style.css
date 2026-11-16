@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f4efff, #e9eaff, #f8f5ff);
+    color: #282344;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e9e2ff;
+    box-shadow: 0 3px 15px rgba(60, 40, 100, 0.05);
+}
+
+header h2 {
+    color: #7955d9;
+    font-size: 28px;
+    font-weight: 750;
+    letter-spacing: -1px;
+}
+
+header span {
+    color: #77718e;
+    font-size: 14px;
+}
+
+/* Main */
+main {
+    max-width: 950px;
+    margin: 55px auto;
+    padding: 0 22px;
+}
+
+/* Welcome */
+.welcome {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.welcome h1 {
+    font-size: 36px;
+    margin-bottom: 12px;
+    color: #302452;
+    letter-spacing: -1px;
+}
+
+.welcome p {
+    color: #77718e;
+    font-size: 16px;
+}
+
+/* Login and Register Card */
+#authSection {
+    max-width: 440px;
+    margin: 35px auto 65px;
+    padding: 42px 38px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid #eee8ff;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 18px 55px rgba(91, 64, 160, 0.13);
+    transition: 0.3s ease;
+}
+
+#authSection h2 {
+    font-size: 27px;
+    color: #302452;
+    margin-bottom: 28px;
+    letter-spacing: -0.5px;
+}
+
+#authSection input {
+    display: block;
+    width: 100%;
+    padding: 15px 17px;
+    margin-bottom: 17px;
+    border: 1px solid #e3dcf5;
+    border-radius: 12px;
+    outline: none;
+    background: #faf9ff;
+    color: #302452;
+    font-size: 14px;
+    transition: 0.25s ease;
+}
+
+#authSection input:focus {
+    border-color: #8965e8;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(137, 101, 232, 0.12);
+}
+
+#authSection input::placeholder {
+    color: #aaa2bd;
+}
+
+#authSection .download-btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 7px;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #8965e8, #6845c5);
+    font-size: 15px;
+    box-shadow: 0 7px 18px rgba(121, 85, 217, 0.22);
+}
+
+#authSection .download-btn:hover {
+    background: linear-gradient(135deg, #7650d5, #5835b0);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(121, 85, 217, 0.3);
+}
+
+#authSection p {
+    color: #858098;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+#authSection a {
+    color: #7955d9;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#authSection a:hover {
+    text-decoration: underline;
+}
+
+/* Logged-in Welcome */
+#appSection>.welcome {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(95, 65, 170, 0.07);
+}
+
+#appSection>.welcome h2 {
+    color: #7955d9;
+    margin-bottom: 15px;
+}
+
+#logoutBtn {
+    background: #f1ecff;
+    color: #7955d9;
+}
+
+#logoutBtn:hover {
+    background: #e5dcff;
+}
+
+/* Upload section */
+.upload-box {
+    background: white;
+    border: 2px dashed #bba7f5;
+    border-radius: 22px;
+    text-align: center;
+    padding: 48px 20px;
+    box-shadow: 0 12px 35px rgba(95, 65, 170, 0.09);
+    transition: 0.3s ease;
+}
+
+.upload-box:hover {
+    border-color: #7955d9;
+    box-shadow: 0 15px 40px rgba(95, 65, 170, 0.14);
+}
+
+.upload-icon {
+    font-size: 55px;
+    margin-bottom: 18px;
+}
+
+.upload-box h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #302452;
+}
+
+.upload-box p {
+    color: #77718e;
+    margin-bottom: 24px;
+}
+
+#fileInput {
+    display: none;
+}
+
+.upload-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #8965e8, #6845c5);
+    color: white;
+    padding: 14px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 650;
+    box-shadow: 0 5px 14px rgba(121, 85, 217, 0.25);
+    transition: 0.25s ease;
+}
+
+.upload-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(121, 85, 217, 0.3);
+}
+
+.upload-box .note {
+    font-size: 12px;
+    margin: 24px 0 0;
+}
+
+/* My Files */
+.files-section {
+    margin-top: 42px;
+}
+
+.files-section h2 {
+    font-size: 24px;
+    margin-bottom: 18px;
+    color: #302452;
+}
+
+#fileList {
+    background: white;
+    border-radius: 18px;
+    padding: 22px;
+    border: 1px solid #e9e2ff;
+    box-shadow: 0 8px 25px rgba(95, 65, 170, 0.06);
+}
+
+.empty-message {
+    color: #9992ad;
+    text-align: center;
+    padding: 18px;
+}
+
+/* File cards */
+.file-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 18px 12px;
+    border-bottom: 1px solid #eee8ff;
+    transition: background 0.2s;
+}
+
+.file-card:last-child {
+    border-bottom: none;
+}
+
+.file-card:hover {
+    background: #faf8ff;
+}
+
+.file-info {
+    min-width: 0;
+    flex: 1;
+}
+
+.file-info h3 {
+    font-size: 16px;
+    overflow-wrap: anywhere;
+    margin-bottom: 8px;
+    color: #3b315c;
+}
+
+/* Buttons */
+.download-btn {
+    background: #7955d9;
+    color: white;
+    border: none;
+    padding: 10px 17px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: 600;
+    flex-shrink: 0;
+    transition: 0.2s ease;
+}
+
+.download-btn:hover {
+    background: #6240bd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(121, 85, 217, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 28px 15px;
+    color: #88819e;
+    font-size: 13px;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    header {
+        padding: 18px 5%;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    header h2 {
+        font-size: 24px;
+    }
+
+    header span {
+        font-size: 12px;
+    }
+
+    main {
+        margin-top: 32px;
+    }
+
+    .welcome h1 {
+        font-size: 27px;
+    }
+
+    #authSection {
+        padding: 32px 22px;
+        margin-top: 25px;
+    }
+
+    #authSection h2 {
+        font-size: 24px;
+    }
+
+    .upload-box {
+        padding: 35px 15px;
+    }
+
+    .file-card {
+        justify-content: flex-start;
+    }
+
+    .file-info {
+        flex-basis: 100%;
+    }
+}

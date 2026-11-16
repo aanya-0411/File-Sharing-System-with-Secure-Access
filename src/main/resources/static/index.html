@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure File Sharing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>FileShare</h2>
+        <span>Secure File Sharing System</span>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h1>Share Files Securely 🔐</h1>
+            <p>Upload, manage and share your files in one place.</p>
+        </section>
+
+        <section id="authSection" class="upload-box">
+            <h2 id="authTitle">Login to FileShare</h2>
+
+            <div id="loginForm">
+                <input type="text" id="loginUsername"
+                    placeholder="Enter username">
+                <input type="password" id="loginPassword"
+                    placeholder="Enter password">
+
+                <button type="button" id="loginBtn" class="download-btn">
+                    Login
+                </button>
+
+                <p>Don't have an account?
+                    <a href="#" id="showRegister">Register here</a>
+                </p>
+            </div>
+
+            <div id="registerForm" style="display:none;">
+                <input type="text" id="registerUsername"
+                    placeholder="Choose username">
+                <input type="password" id="registerPassword"
+                    placeholder="Choose password (minimum 6 characters)">
+
+                <button type="button" id="registerBtn" class="download-btn">
+                    Register
+                </button>
+
+                <p>Already have an account?
+                    <a href="#" id="showLogin">Login here</a>
+                </p>
+            </div>
+        </section>
+
+        <section id="appSection" style="display:none;">
+
+            <div class="welcome">
+                <h2 id="userWelcome"></h2>
+                <button id="logoutBtn" class="download-btn">
+                    Logout
+                </button>
+            </div>
+
+            <section class="upload-box">
+                <div class="upload-icon">☁️</div>
+                <h2>Upload Your Files</h2>
+                <p>Select a file from your computer to get started.</p>
+
+                <input type="file" id="fileInput" multiple>
+                <label for="fileInput" class="upload-btn">
+                    Choose Files
+                </label>
+
+                <p class="note">Your files, organized in one place.</p>
+            </section>
+
+            <section class="files-section">
+                <h2>My Files</h2>
+
+                <button id="clearFilesBtn" class="download-btn">
+                    Clear All
+                </button>
+
+                <div id="fileList">
+                    <p class="empty-message">No files uploaded yet.</p>
+                </div>
+            </section>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>FileShare © 2026 | Secure File Sharing Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

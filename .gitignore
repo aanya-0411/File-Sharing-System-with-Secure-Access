@@ -1,0 +1,6 @@
+target/
+uploads/
+.DS_Store
+.env
+*.log
+application-local.properties
